@@ -45,7 +45,7 @@ JNIEnv *JNIEnvContainer::operator->() {
 JNIEnvContainer::JNIEnvContainer() {}
 
 JNIEnvContainer::~JNIEnvContainer() {
-    detach();
+//     detach();
 }
 
 void JNIEnvContainer::attach() {
