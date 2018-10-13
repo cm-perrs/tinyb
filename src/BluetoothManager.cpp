@@ -41,13 +41,13 @@ class tinyb::BluetoothEventManager {
 public:
     static void on_interface_added (GDBusObject *object,
         GDBusInterface *interface, gpointer user_data) {
-        GDBusInterfaceInfo *info = g_dbus_interface_get_info(interface);
+//         GDBusInterfaceInfo *info = g_dbus_interface_get_info(interface);
         BluetoothType type = BluetoothType::NONE;
         BluetoothManager *manager = BluetoothManager::get_bluetooth_manager();
 
         /* Unknown interface, ignore */
-        if (info == NULL)
-            return;
+//         if (info == NULL)
+//             return;
 
         if(IS_GATT_SERVICE1_PROXY(interface)) {
             type = BluetoothType::GATT_SERVICE;
